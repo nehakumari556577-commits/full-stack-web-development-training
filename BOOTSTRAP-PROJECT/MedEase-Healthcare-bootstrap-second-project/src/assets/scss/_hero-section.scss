@@ -1,0 +1,244 @@
+.hero-section {
+    overflow: hidden;
+}
+
+.hero-badge {
+    background: #F2F7FF;
+}
+
+.hero-title {
+    max-width: 41.875rem;
+    font-size: 5rem;
+    font-weight: $fw-medium;
+    line-height: 1.5;
+    letter-spacing: -.03em;
+    color: $body-color;
+}
+
+.hero-italic {
+    font-family: $font-family-heading;
+    font-size: 5rem;
+    font-style: italic;
+    font-weight: $fw-medium;
+    line-height: 1.5;
+    letter-spacing: -.03em;
+    color: $primary;
+}
+
+.hero-text {
+    max-width: 34.375rem;
+}
+
+.hero-btn {
+    min-height: 4.25rem;
+    padding-inline: 3rem;
+    border-radius: $radius-pill;
+}
+
+.hero-btn img {
+    width: 1.125rem;
+    height: 1.125rem;
+}
+
+.hero-image-wrapper {
+    position: relative;
+}
+
+.doctor-img {
+    width: 34.375rem;
+    max-width: 100%;
+    height: auto;
+    border-radius: 1.5rem;
+}
+
+.stat-top,
+.stat-bottom {
+    border: 1px solid #ECF4FD;
+    background: $white;
+    z-index: 2;
+}
+
+.stat-top {
+    min-width: 17.5rem;
+    min-height: 5.625rem;
+    top: -2rem;
+    right: -.5rem;
+}
+
+.stat-bottom {
+    min-width: 17.5rem;
+    min-height: 7rem;
+     bottom: -3rem;
+    left: -.5rem;
+}
+
+@media (max-width:1199.98px) {
+
+    .hero-title,
+    .hero-italic {
+        font-size: 4rem;
+    }
+
+    .doctor-img {
+        width: 30rem;
+    }
+
+    .stat-top {
+        min-width: 15rem;
+        top: -1rem;
+        right: 0;
+    }
+
+    .stat-bottom {
+        min-width: 15rem;
+        bottom: -1rem;
+        left: 0;
+    }
+}
+
+@media (max-width:991.98px) {
+
+    .hero-section {
+        text-align: center;
+    }
+
+    .hero-title,
+    .hero-italic {
+        max-width: 100%;
+        font-size: 3.25rem;
+        line-height: 1.3;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        margin: 0 auto 2rem;
+    }
+
+    .hero-btn {
+        margin-inline: auto;
+    }
+
+    .hero-image-col {
+        margin-top: 2.5rem;
+    }
+
+    .doctor-img {
+        width: 22rem;
+    }
+
+    .stat-top {
+        min-width: 11rem;
+        min-height: auto;
+        top: .75rem;
+        right: .5rem;
+        padding: .75rem !important;
+    }
+
+    .stat-bottom {
+        min-width: 12rem;
+        min-height: auto;
+        left: .5rem;
+        bottom: .75rem;
+        padding: .75rem !important;
+    }
+
+    .stat-top h3,
+    .stat-bottom h3 {
+        font-size: 1.25rem;
+    }
+
+    .stat-top small,
+    .stat-bottom small {
+        font-size: .7rem;
+    }
+}
+
+
+@media (max-width:767.98px) {
+
+    .hero-title,
+    .hero-italic {
+        font-size: 2.5rem;
+        line-height: 1.3;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        font-size: 1rem;
+    }
+
+    .hero-badge {
+        width: 100%;
+        justify-content: center;
+        padding: .5rem 1rem;
+        font-size: .75rem;
+    }
+
+    .hero-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .doctor-img {
+        width: 18rem;
+    }
+
+    .stat-top {
+        min-width: 8rem;
+        padding: .5rem !important;
+        top: .5rem;
+        right: .3rem;
+    }
+
+    .stat-bottom {
+        min-width: 9rem;
+        padding: .5rem !important;
+        bottom: .5rem;
+        left: .3rem;
+    }
+
+    .stat-top h3 {
+        font-size: .95rem;
+    }
+
+    .stat-bottom h3 {
+        font-size: 1rem;
+    }
+
+    .stat-top small,
+    .stat-bottom small {
+        font-size: .6rem;
+        line-height: 1.2;
+    }
+}
+
+
+@media (max-width:575.98px) {
+
+    .hero-title,
+    .hero-italic {
+        font-size: 2rem;
+    }
+
+    .doctor-img {
+        width: 16rem;
+    }
+
+    .stat-top {
+        min-width: 7rem;
+    }
+
+    .stat-bottom {
+        min-width: 8rem;
+    }
+
+    .stat-top h3,
+    .stat-bottom h3 {
+        font-size: .85rem;
+    }
+
+    .stat-top small,
+    .stat-bottom small {
+        font-size: .55rem;
+    }
+}

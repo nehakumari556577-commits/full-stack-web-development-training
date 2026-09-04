@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Data Utility</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Data Utility</h1>
+
+    <script>
+
+        let users = [
+            {
+                id: 101,
+                name: " neha ",
+                dob: "2007-06-15",
+                salary: "55000",
+                skills: ["html", "css", "javascript"]
+            },
+
+            {
+                id: 102,
+                name: " saloni ",
+                dob: "2006-11-03",
+                salary: "72000",
+                skills: ["react", "node", "css"]
+            },
+
+            {
+                id: 103,
+                name: "goldy",
+                dob: "2005-02-25",
+                salary: "48000",
+                skills: ["vue", "javascript", "html"]
+            }
+        ];
+
+        function titleCase(name) {
+            return name
+                .trim()
+                .toLowerCase()
+                .split(" ")
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(" ");
+        }
+
+
+        let formattedNames = users.map(user => titleCase(user.name));
+
+        console.log("========== Task 1 : String Operations ==========");
+        console.log("Formatted Names:");
+        console.log(formattedNames);
+
+        
+        let allSkills = users.flatMap(user => user.skills);
+
+        let uniqueSkills = [...new Set(allSkills)].sort();
+
+        let javascriptUsers = users.filter(user =>
+            user.skills.includes("javascript")
+        ).length;
+
+        console.log("\n========== Task 2 : Array Operations ==========");
+        console.log("Unique Skills:");
+        console.log(uniqueSkills);
+
+        console.log("JavaScript Users:");
+        console.log(javascriptUsers);
+
+        let salaries = users.map(user => Number(user.salary));
+
+        let averageSalary =
+            salaries.reduce((sum, salary) => sum + salary, 0) / salaries.length;
+
+        let highestSalary = Math.max(...salaries);
+        let lowestSalary = Math.min(...salaries);
+
+        console.log("\n========== Task 3 : Number Operations ==========");
+        console.log({
+            average: averageSalary.toFixed(0),
+            highest: highestSalary,
+            lowest: lowestSalary
+        });
+
+        function calculateAge(dob) {
+            let birthDate = new Date(dob);
+            let today = new Date();
+
+            let age = today.getFullYear() - birthDate.getFullYear();
+
+            let month = today.getMonth() - birthDate.getMonth();
+
+            if (
+                month < 0 ||
+                (month === 0 && today.getDate() < birthDate.getDate())
+            ) {
+                age--;
+            }
+
+            return age;
+        }
+
+
+        let oldestUser = users[0];
+
+        users.forEach(user => {
+            if (new Date(user.dob) < new Date(oldestUser.dob)) {
+                oldestUser = user;
+            }
+        });
+
+        console.log("\n========== Task 4 : Date Operations ==========");
+        console.log({
+            name: titleCase(oldestUser.name),
+            age: calculateAge(oldestUser.dob)
+        });
+
+    </script>
+
+</body>
+
+</html>

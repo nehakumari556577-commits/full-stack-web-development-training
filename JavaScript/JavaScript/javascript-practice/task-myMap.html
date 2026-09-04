@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myMap</title>
+</head>
+<body>
+
+<h1>Custom myMap() Method Example</h1>
+
+<script>
+
+    
+    Array.prototype.myMap = function(callback) {
+        let result = [];
+
+        for (let i = 0; i < this.length; i++) {
+            result.push(callback(this[i], i, this));
+        }
+
+        return result;
+    };
+
+    let arr = ['a', 'b', 'c', 'd'];
+
+    let newArr = arr.myMap((val, i) => {
+        return val + i;
+    });
+
+    console.log(newArr);
+</script>
+
+</body>
+</html>

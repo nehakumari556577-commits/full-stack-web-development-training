@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+</head>
+<body>
+
+<header>
+    <h1>Registration form</h1>
+</header>
+
+<main>
+<form action="#" method="get">
+
+<div>
+    <label for="Fullname">Full name</label>
+    <input type="text" id="fullname" name="fullname"
+    required minlength="3" maxlength="50"
+    pattern="[A-Za-z ]{3,50}"
+    title="Only letters allowed (min 3, max 50)">
+</div><br>
+
+<div>
+    <label for="Username">Username</label>
+    <input type="text" name="Username" id="Username"
+       required minlength="5" maxlength="15"
+       pattern="^[A-Za-z0-9]{5,15}$">
+</div><br>
+
+<div>
+    <label for="useremail">Email Address</label>
+    <input type="email" name="useremail" id="useremail" required>
+</div><br>
+
+<div>
+    <label for="userpassword">Password</label>
+    <input type="password" name="userpassword" id="userpassword"
+       required minlength="6" maxlength="20"
+       pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{6,20}$">
+</div><br>
+
+<div>
+    <label for="phonenumber">Phone number</label>
+    <input type="tel" name="phonenumber" id="phonenumber"
+       required placeholder="+91XXXXXXXXXX"
+       pattern="^\+91[6-9][0-9]{9}$">
+</div><br>
+
+<div>
+    <label for="userAge">Age</label>
+    <input type="number" name="userAge" id="userAge"
+       required min="18" max="60">
+</div><br>
+
+<div>
+    <label for="userDob">Date of birth</label>
+    <input type="date" name="userDob" id="userDob" 
+        required
+        min="1966-01-01"
+        max="2008-12-31">
+
+
+</div><br>
+
+<div>
+    <label for="country">Country</label>
+    <select name="country" id="country" required>
+    <option value="">Select Country</option>
+    <option value="india">India</option>
+    <option value="nepal">Nepal</option>
+    <option value="bangladesh">Bangladesh</option>
+    <option value="pakistan">Pakistan</option>
+    <option value="sri_lanka">Sri Lanka</option>
+    <option value="china">China</option>
+    <option value="japan">Japan</option>
+    <option value="usa">United States</option>
+    <option value="uk">United Kingdom</option>
+    <option value="canada">Canada</option>
+    <option value="australia">Australia</option>
+    <option value="germany">Germany</option>
+    <option value="france">France</option>
+</select>
+</div><br>
+
+<div>
+<label>Gender</label><br>
+
+    <label for="male">Male</label>
+    <input type="radio" name="gender" value="m" id="male" required><br>
+
+    <label for="female">Female</label>
+    <input type="radio" name="gender" value="f" id="female"><br>
+
+    <label for="others">Others</label>
+    <input type="radio" name="gender" value="o" id="others">
+</div><br>
+
+<div>
+<label>Skills</label><br>
+
+    <label for="clang">C</label>
+    <input type="checkbox" name="skills" value="c language" id="clang"><br>
+
+    <label for="python">Python</label>
+    <input type="checkbox" name="skills" value="python" id="python"><br>
+
+    <label for="html">HTML</label>
+    <input type="checkbox" name="skills" value="html" id="html">
+</div><br>
+
+<div>
+    <label for="website">Website</label>
+    <input type="url" name="website" id="website"
+       placeholder="https://www.academy.indixpert.com/">
+</div><br>
+
+<div>
+    <label for="profilePic">Profile Picture</label>
+    <input type="file" name="profilePic" id="profilePic"
+           accept="image/jpeg, image/png">
+</div><br>
+
+<div>
+    <label for="bio">About Yourself</label>
+    <textarea name="bio" id="bio" rows="4" cols="30" maxlength="400"></textarea>
+</div><br>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+
+</form>
+</main>
+
+</body>
+</html>

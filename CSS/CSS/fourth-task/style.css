@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, sans-serif;
+}
+
+.parent{
+  width: 320px;
+  height: 320px;
+  border: 2px solid #6aa3bd;
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.child{
+  width: 160px;
+  height: 60px;
+  background-color: #4d7098;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+}

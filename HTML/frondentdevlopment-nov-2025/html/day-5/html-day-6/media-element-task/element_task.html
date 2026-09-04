@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Media Elements Task</title>
+</head>
+
+<body>
+
+<header>
+    <h1>HTML Media Elements</h1>
+</header>
+
+<main>
+
+    <!-- IMAGE -->
+    <h2>Image</h2>
+    <img src="https://picsum.photos/300/200" 
+         alt="Random Sample Image" 
+         width="560" 
+         height="315">
+
+    <!-- AUDIO -->
+    <h2>Audio</h2>
+        <audio src="https://samplelib.com/mp3/sample-3s.mp3" controls></audio>
+        <audio src="https://samplelib.com/mp3/sample-3s.mp3" autoplay controls></audio>
+
+    Your browser does not support the audio element.
+
+
+    <!-- VIDEO -->
+    <h2>Video (MP4 + OGG with Subtitle + Caption)</h2>
+
+    <figure>
+        <video controls autoplay muted width="560">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+
+            <track src="subtitle.vtt"
+                   kind="subtitles"
+                   srclang="en"
+                   label="English"
+                   default>
+
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- CAPTION -->
+        <figcaption>This is a sample video with subtitles</figcaption>
+    </figure>
+
+    <!-- YOUTUBE -->
+    <h2>YouTube Video (Start from 1:20)</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Gra0LETNYzc?si=YRyuLfw75jv3IKDd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+    <!-- MAP -->
+    <h2>Map (Mirganj)</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3573.6580923965817!2d84.3838583!3d26.4022316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3993030011c1c31b%3A0x9a5b9556312dfd!2sChanawe%20District%20Jail!5e0!3m2!1sen!2sin!4v1776734472762!5m2!1sen!2sin" width="560" height="315" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</main>
+
+</body>
+</html>

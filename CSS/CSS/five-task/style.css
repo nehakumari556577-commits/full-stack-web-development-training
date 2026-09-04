@@ -1,0 +1,41 @@
+*{
+  margin:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial, sans-serif;
+  padding:20px;
+}
+
+.parent{
+  width:520px;
+  border:2px solid #4a90e2;
+
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+
+  padding:15px;
+}
+
+.child{
+  height:50px;
+
+  background:#4d7098;
+  color:white;
+
+  border-radius:10px;
+  border:2px solid #8fb3c9;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  flex:1 1 105px; /* base flex */
+}
+
+/* last row ko equal 3 columns banane ke liye */
+.child:nth-child(n+5){
+  flex:1 1 145px;
+}

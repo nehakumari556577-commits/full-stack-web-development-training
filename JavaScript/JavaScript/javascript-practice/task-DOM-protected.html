@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data Table</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        h2 {
+            text-align: left;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2>User Data Table</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>DoB</th>
+                <th>Age</th>
+                <th>Salary</th>
+                <th>Skills</th>
+            </tr>
+        </thead>
+
+        <tbody id="tableBody">
+
+        </tbody>
+    </table>
+
+    <script>
+
+
+        const users = [
+
+            {
+                id: 101,
+                name: " abhishek kumar ",
+                dob: "2005-06-15",
+                salary: "55000",
+                skills: ["html", "css", "javascript"]
+            },
+
+            {
+                id: 102,
+                name: " aryan kumar ",
+                dob: "2005-11-03",
+                salary: "72000",
+                skills: ["react", "node", "css"]
+            },
+
+            {
+                id: 103,
+                name: " sumit kumar ",
+                dob: "2004-05-25",
+                salary: "48000",
+                skills: ["vue", "javascript", "html"]
+            }
+        ];
+
+        function titleCase(name) {
+            return name
+                .trim()
+                .toLowerCase()
+                .split(" ")
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(" ");
+
+        }
+
+        function formatDate(date) {
+
+            return new Date(date).toLocaleDateString("en-IN", {
+
+                day: "2-digit",
+                month: "short",
+                year: "numeric"
+
+            });
+
+        }
+
+        function calculateAge(dob) {
+
+            const birth = new Date(dob);
+
+            const today = new Date();
+
+            let age = today.getFullYear() - birth.getFullYear();
+
+            const month = today.getMonth() - birth.getMonth();
+
+            if (month < 0 || (month === 0 && today.getDate() < birth.getDate())) {
+
+                age--;
+
+            }
+
+            return age;
+
+        }
+    
+        
+        const tbody = document.getElementById("tableBody");
+
+        users.forEach(user => {
+
+            const row = document.createElement("tr");
+
+            row.innerHTML = `
+
+        <td>${titleCase(user.name)}</td>
+
+        <td>${formatDate(user.dob)}</td>
+
+        <td>${calculateAge(user.dob)}</td>
+
+        <td>${Number(user.salary)}</td>
+
+        <td>${user.skills.map(skill => titleCase(skill)).join(", ")}</td>
+
+`;
+            tbody.appendChild(row);
+
+        });
+
+    </script>
+
+</body>
+
+</html>

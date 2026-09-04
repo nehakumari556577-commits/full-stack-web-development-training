@@ -1,0 +1,98 @@
+
+
+$font-family-base: "Inter", sans-serif;
+$font-family-heading: "Cambon", serif;
+$font-family-body: $font-family-base;
+
+
+$primary: #2F80ED;
+$secondary: #6C757D;
+
+$body-color: #222222;
+$body-bg: #FFFFFF;
+
+$white: #FFFFFF;
+$black: #000000;
+
+$light-bg: #F8F9FA;
+$light: $light-bg;
+
+$border-color: #E5E7EB;
+
+
+
+$font-size-base: 1rem;
+$font-size-sm: .875rem;
+$font-size-lg: 1.125rem;
+$font-size-xl: 2rem;
+
+
+$fs-base: $font-size-base;
+$fs-sm: $font-size-sm;
+$fs-lg: $font-size-lg;
+$fs-xl: $font-size-xl;
+
+
+
+$heading-hero: 5rem;
+$heading-xl: 3.75rem;
+$heading-lg: 3rem;
+$heading-md: 2.25rem;
+$heading-sm: 1.75rem;
+
+
+
+$fs-heading-hero: $heading-hero;
+$fs-heading-xl: $heading-xl;
+$fs-heading-lg: $heading-lg;
+$fs-heading-md: $heading-md;
+$fs-heading-sm: $heading-sm;
+
+
+
+$fw-light: 300;
+$fw-regular: 400;
+$fw-normal: $fw-regular;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+
+$line-height-base: 1.5;
+$lh-heading: 1.2;
+
+
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1440px
+);
+
+
+$radius-sm: .5rem;
+$radius-md: 1rem;
+$radius-lg: 2rem;
+$radius-pill: 999rem;
+
+$rounded-sm: $radius-sm;
+$rounded-md: $radius-md;
+$rounded-lg: $radius-lg;
+$rounded-pill: $radius-pill;
+
+
+
+$shadow-sm: 0 .25rem 1.25rem rgba(0, 0, 0, .08);
+$shadow-md: 0 .625rem 1.875rem rgba(0, 0, 0, .10);
+
+
+$shadow: $shadow-sm;
+$shadow-lg: $shadow-md;
+
+
+$transition: all .3s ease;
+$transition-fast: .3s ease;
+$transition-slow: .5s ease;
+

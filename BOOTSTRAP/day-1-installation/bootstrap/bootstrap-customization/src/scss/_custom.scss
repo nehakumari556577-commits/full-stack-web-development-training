@@ -1,0 +1,118 @@
+.text-primary {
+    color: $text-primary;
+}
+
+.custom-card {
+    background-color: $card-bg;
+    color: $card-text;
+    padding: $card-padding;
+    border-radius: $card-radius;
+    text-align: center;
+}
+
+.card-box {
+    background-color: #5d7fa3;
+    color: #ffffff;
+    border: 2px solid #b7dff2;
+    border-radius: $radius;
+    padding: 10px;
+    min-height: 190px;
+    margin: 2px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: bold;
+}
+
+.card-1 {
+    background-color: #0d6efd;
+}
+
+.card-2 {
+    background-color: #198754;
+}
+
+.card-3 {
+    background-color: #dc3545;
+}
+
+.card-4 {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.card-5 {
+    background-color: #6f42c1;
+}
+
+body {
+    background: #ffffff;
+}
+
+.sidebar {
+    background: #1d161d;
+    height: 700px;
+    border-radius: 4px;
+}
+
+.top-banner {
+    background: #efefef;
+    height: 130px;
+    border-radius: 6px;
+}
+
+.small-card {
+    background: #efefef;
+    height: 90px;
+    border-radius: 5px;
+}
+
+.small-card2 {
+    background: #efefef;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.right-card {
+    height: 200px;
+    border: 1px solid #ececec;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.right-card .top {
+    height: 45%;
+    background: #efefef;
+}
+
+.right-card .bottom {
+    height: 55%;
+    background: #ffffff;
+}
+
+.footer-section {
+    background: #efefef;
+    border-radius: 6px;
+}
+
+.footer-box {
+    width: 70px;
+    height: 80px;
+    background: #dddddd;
+    border-radius: 5px;
+}
+
+.footer-box-white {
+    width: 70px;
+    height: 80px;
+    background: #ffffff;
+    border-radius: 5px;
+}
+
+.last-box {
+    width: 35px;
+    height: 45px;
+    background: #ffffff;
+    border-radius: 5px;
+}

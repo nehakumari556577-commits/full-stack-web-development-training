@@ -1,0 +1,223 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#f3f3f3;
+  padding:10px;
+  font-family:Arial, sans-serif;
+}
+
+h1{
+  color:blue;
+  margin-bottom:20px;
+}
+
+p{
+  font-size:18px;
+  line-height:1.5;
+  margin-bottom:20px;
+}
+
+
+/* ================= TASK 1 ================= */
+
+.task-1{
+  border:2px solid #4f8fd6;
+
+  padding:8px;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr 1fr;
+
+  gap:20px;
+
+  width:100%;
+  max-width:600px;
+
+  margin-bottom:40px;
+}
+
+.task-1 .item{
+  background:#4f759b;
+
+  color:white;
+
+  padding:12px;
+
+  border-radius:8px;
+
+  font-size:22px;
+}
+
+
+/* ================= TASK 2 ================= */
+
+.task-2{
+  border:2px solid #4f8fd6;
+
+  padding:10px;
+
+  display:grid;
+
+  grid-template-columns:repeat(4, 1fr);
+
+  grid-template-rows:repeat(4, 45px);
+
+  width:100%;
+  max-width:380px;
+
+  margin-bottom:40px;
+}
+
+.task-2 .box{
+  border-radius:6px;
+
+  padding:10px;
+
+  color:white;
+
+  font-size:18px;
+}
+
+.task-2 .one{
+  background:#7b919b;
+
+  grid-column:1 / 4;
+
+  grid-row:1 / 4;
+
+  border:2px solid #5f7680;
+}
+
+.task-2 .two{
+  background:#d6b1b8;
+
+  grid-column:2 / 5;
+
+  grid-row:2 / 5;
+
+  border:2px solid #b78d95;
+
+  opacity:.9;
+}
+
+
+/* ================= TASK 3 ================= */
+
+.task-3{
+  border:2px solid #4f8fd6;
+
+  padding:10px;
+
+  margin-top:20px;
+
+  display:grid;
+
+  grid-template-columns:120px 1fr 1fr;
+
+  grid-template-areas:
+  "one one one"
+  "two three three"
+  ". four four";
+
+  gap:20px;
+
+  width:100%;
+  max-width:550px;
+
+  margin-bottom:40px;
+}
+
+.task-3 .card{
+  background:#4f759b;
+
+  color:white;
+
+  padding:12px;
+
+  border-radius:8px;
+
+  font-size:22px;
+}
+
+.task-3 .one{
+  grid-area:one;
+}
+
+.task-3 .two{
+  grid-area:two;
+}
+
+.task-3 .three{
+  grid-area:three;
+}
+
+.task-3 .four{
+  grid-area:four;
+}
+
+
+/* ================= TASK 4 ================= */
+
+.task-4{
+  display:grid;
+
+  grid-template-columns:repeat(3, 140px);
+
+  gap:10px;
+
+  margin-top:20px;
+
+  align-items:start;
+
+}
+
+.photo-card{
+  display:flex;
+
+  flex-direction:column;
+
+  gap:6px;
+}
+
+.photo-card img{
+  width:140px;
+
+  height:140px;
+
+  object-fit:cover;
+
+  border:1px solid #d8d8d8;
+}
+
+.tags{
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:6px;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+.tags span{
+  background:#a9a9a9;
+
+  color:white;
+
+  padding:4px 8px;
+
+  border-radius:3px;
+
+  font-size:12px;
+  
+  line-height:1;
+
+
+}

@@ -1,0 +1,1 @@
+{"error": "list index out of range", "datetime": "2026-02-23 06:43:17.061217", "function_name": "get_element", "entered_index": 5}

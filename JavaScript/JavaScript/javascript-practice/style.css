@@ -1,0 +1,75 @@
+body{
+    font-family: Arial, sans-serif;
+    margin:20px;
+}
+
+table{
+    width:90%;
+    border-collapse:collapse;
+}
+
+th,td{
+    border:1px solid black;
+    padding:8px;
+}
+
+th{
+    background-color:hsl(86, 83%, 54%);
+    color:white;
+}
+
+tr:nth-child(even){
+    background-color:#f2f2f2;
+}
+
+tr:hover{
+    background-color:#d9f2d9;
+}
+
+button{
+    padding:5px 10px;
+    cursor:pointer;
+    border:none;
+    color:white;
+    border-radius:5px;
+}
+
+
+.edit-btn{
+    background-color:#007bff;
+}
+
+.edit-btn:hover{
+    background-color:#0056b3;
+}
+
+
+.delete-btn{
+    background-color:#dc3545;
+}
+
+.delete-btn:hover{
+    background-color:#b02a37;
+}
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.5);
+}
+
+.modal-content{
+    width:300px;
+    margin:100px auto;
+    padding:20px;
+    background:#fff;
+    border-radius:8px;
+}
+
+input{
+    width:100%;
+    padding:8px;
+    margin:8px 0;
+    box-sizing:border-box;
+}

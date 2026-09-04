@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h2>User Data Table</h2>
+
+    <table id="userTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>DoB</th>
+                <th>Age</th>
+                <th>Salary</th>
+                <th>Skills</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody></tbody>
+    </table>
+
+    <!-- Edit Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h3>Edit User</h3>
+
+            <form id="editForm">
+
+                <input type="hidden" id="userIndex">
+
+                <label>Name</label>
+                <input type="text" id="name">
+
+                <label>DOB</label>
+                <input type="date" id="dob">
+
+                <label>Salary</label>
+                <input type="number" id="salary">
+
+                <label>Skills (Comma Separated)</label>
+                <input type="text" id="skills">
+
+                <br><br>
+
+                <button type="submit" class="edit-btn">Update</button>
+
+                <button type="button" class="delete-btn" onclick="closeModal()">
+                    Cancel
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

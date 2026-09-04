@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result</title>
+</head>
+
+<body>
+
+    <h1>Student Result</h1>
+
+    <script>
+
+        let students = ["Neha", "Saloni", "Goldy", "Shajiya", "Babli", "Rohan", "Pooja"];
+
+        let marks = [
+            [80, 75, 90, 85, 95],
+            [89, 77, 95, 85, 90],
+            [60, 75, 70, 80, 68],
+            [95, 90, 98, 92, 96],
+            [40, 45, 38, 50, 42],
+            [88, 91, 84, 90, 87],
+            [35, 45, 55, 30, 40]
+        ];
+
+        let highestTotal = 0;
+        let highestStudent = "";
+
+        let lowestTotal = Infinity;
+        let lowestStudent = "";
+
+        let classTotal = 0;
+
+        let gradeA = 0;
+        let gradeB = 0;
+        let gradeC = 0;
+        let gradeD = 0;
+        let gradeF = 0;
+
+        let totalMarks = [];
+
+        console.log("========== STUDENT RESULT ==========");
+
+        for (let i = 0; i < students.length; i++) {
+
+            let total = 0;
+
+            for (let j = 0; j < marks[i].length; j++) {
+                total += marks[i][j];
+            }
+
+            totalMarks.push(total);
+
+            let average = total / marks[i].length;
+
+            let grade = "";
+
+            if (average >= 90) {
+                grade = "A";
+                gradeA++;
+
+            } else if (average >= 75) {
+                grade = "B";
+                gradeB++;
+
+            } else if (average >= 60) {
+                grade = "C";
+                gradeC++;
+
+            } else if (average >= 40) {
+                grade = "D";
+                gradeD++;
+                
+            } else {
+                grade = "F";
+                gradeF++;
+            }
+
+            let result = "Passed";
+
+            for (let j = 0; j < marks[i].length; j++) {
+                if (marks[i][j] < 40) {
+                    result = "Failed";
+                    break;
+                }
+            }
+
+            console.log("--------------------------------");
+            console.log("Student :", students[i].toUpperCase());
+            console.log("Marks :", marks[i].join(", "));
+            console.log("Total Marks :", total);
+            console.log("Average :", average.toFixed(2));
+            console.log("Grade :", grade);
+            console.log("Result :", result);
+
+            classTotal += total;
+
+            if (total > highestTotal) {
+                highestTotal = total;
+                highestStudent = students[i];
+            }
+
+            if (total < lowestTotal) {
+                lowestTotal = total;
+                lowestStudent = students[i];
+            }
+        }
+
+        let classAverage = classTotal / (students.length * marks[0].length);
+
+        console.log("--------------------------------");
+        console.log("Highest Marks :", highestStudent.toUpperCase(), "-", highestTotal);
+        console.log("Lowest Marks :", lowestStudent.toUpperCase(), "-", lowestTotal);
+        console.log("Class Average :", classAverage.toFixed(2));
+
+        console.log("--------------------------------");
+        console.log("Grade A :", gradeA);
+        console.log("Grade B :", gradeB);
+        console.log("Grade C :", gradeC);
+        console.log("Grade D :", gradeD);
+        console.log("Grade F :", gradeF);
+
+        console.log("--------------------------------");
+        console.log("Students Above Class Average");
+
+        for (let i = 0; i < students.length; i++) {
+
+            let studentAverage = totalMarks[i] / marks[i].length;
+
+            if (studentAverage > classAverage) {
+                console.log(students[i], "-", studentAverage.toFixed(2));
+            }
+
+        }
+
+        console.log("--------------------------------");
+
+        let searchName = prompt("Enter Student Name to Search:");
+
+        let found = false;
+
+        for (let i = 0; i < students.length; i++) {
+
+            if (students[i].toLowerCase() === searchName.toLowerCase()) {
+
+                found = true;
+
+                let total = 0;
+
+                for (let j = 0; j < marks[i].length; j++) {
+                    total += marks[i][j];
+                }
+
+                let average = total / marks[i].length;
+
+                let grade = "";
+
+                if (average >= 90) {
+                    grade = "A";
+                } else if (average >= 75) {
+                    grade = "B";
+                } else if (average >= 60) {
+                    grade = "C";
+                } else if (average >= 40) {
+                    grade = "D";
+                } else {
+                    grade = "F";
+                }
+
+                let result = "Passed";
+
+                for (let j = 0; j < marks[i].length; j++) {
+                    if (marks[i][j] < 40) {
+                        result = "Failed";
+                        break;
+                    }
+                }
+
+                console.log("--------------------------------");
+                console.log("SEARCH RESULT");
+                console.log("Student :", students[i].toUpperCase());
+                console.log("Marks :", marks[i].join(", "));
+                console.log("Total Marks :", total);
+                console.log("Average :", average.toFixed(2));
+                console.log("Grade :", grade);
+                console.log("Result :", result);
+
+                break;
+            }
+
+        }
+
+        if (!found) {
+            console.log("Student Not Found");
+        }
+
+        students.sort();
+
+        console.log("--------------------------------");
+        console.log("Students Sorted By Name");
+
+        for (let i = 0; i < students.length; i++) {
+            console.log(students[i]);
+        }
+
+    </script>
+
+</body>
+
+</html>

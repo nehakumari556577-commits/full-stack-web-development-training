@@ -1,0 +1,49 @@
+
+.logo-text{
+    font-size:24px;
+    font-weight:600;
+    line-height:150%;
+    letter-spacing:-0.03em;
+    color:#2563EB;
+}
+
+
+.menu-link{
+    font-size:20px;
+    font-weight:500;
+    line-height:150%;
+    letter-spacing:-0.02em;
+    color:#6B7280 !important;
+}
+
+.menu-link.active{
+    color:#2563EB !important;
+}
+
+.register-btn{
+    width:198px;
+    height:56px;
+    background:#3B82F6;
+    border:none;
+    font-size:16px;
+    font-weight:500;
+}
+
+.register-btn:hover{
+    background:#2563EB;
+}
+
+@media (max-width:991.98px){
+
+    .logo-text{
+        font-size:22px;
+    }
+
+    .menu-link{
+        font-size:18px;
+    }
+
+    .register-btn{
+        width:100%;
+    }
+}

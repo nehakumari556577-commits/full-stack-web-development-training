@@ -1,0 +1,45 @@
+
+.logo-text{
+    font-size:24px;
+    font-weight:600;
+    line-height:150%;
+    letter-spacing:-0.04em;
+}
+
+.footer-content{
+    font-size:16px;
+    font-weight:400;
+    line-height:180%;
+    letter-spacing:-0.02em;
+}
+
+.footer-title{
+    font-size:20px;
+    font-weight:500;
+    line-height:150%;
+    letter-spacing:-0.02em;
+}
+.social-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: $primary;
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+}
+.footer-link{
+    color:rgba(255,255,255,.65);
+    text-decoration:none;
+    font-size:16px;
+    font-weight:400;
+    line-height:180%;
+    letter-spacing:-0.02em;
+}
+
+.footer-link:hover{
+    color:#fff;
+}
+
